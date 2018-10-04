@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
                 switch (radioGroup2.getCheckedRadioButtonId()){
 
                     case R.id.RB:
-                        mora_gamer = 2;
-                        break;
-                    case R.id.RB1:
                         mora_gamer = 0;
                         break;
-                    case R.id.RB2:
+                    case R.id.RB1:
                         mora_gamer = 1;
+                        break;
+                    case R.id.RB2:
+                        mora_gamer = 2;
                         break;
 
                 }
@@ -70,12 +70,13 @@ public class MainActivity extends AppCompatActivity {
                     txv6.setText(name.getText());
                     txv8.setText(MoraString[mora_gamer]);
                     int mora_computer = (int) (Math.random() * 3);
+                    txv9.setText(MoraString[mora_computer]);
                     if ((mora_gamer == 0 && mora_computer == 1) || (mora_gamer == 1 && mora_computer == 2) || (mora_gamer == 2 && mora_computer == 0)){
                         txv7.setText("美女");
                         textView.setText("可惜，你要脫衣服了");
                     } else if (mora_gamer == mora_computer){
                         txv7.setText("平局");
-                        textView.setText("平局!Aga!");
+                        textView.setText("平局!Agal!");
                     } else  {
                         txv7.setText(name.getText());
                         textView.setText("美女脫一件");
